@@ -128,29 +128,28 @@ function validQuantity() {
 
 // check validation
 
-const cities = document.querySelectorAll(`input[name="location"]`);
-
 function validCities()
 {
   const errorcities = document.querySelector("#error-message-cities");
-	let isValid = false;
-	cities.forEach(city =>
-	{
-    console.log(city.checked,"checked")
-		if (city.checked ==true)
-		{ 
-			isValid = true
-      errorcities.textContent = "";
-      return;
-    
-		}
-   
-   
-	})
+
+    var radios = document.getElementsByName("location");
+    var formValid = false;
+
+    var i = 0;
+    while (!formValid && i < radios.length) {
+        if (radios[i].checked) {
+          formValid = true;
+          errorcities.textContent = ''
+        }
+        i++;        
+    }
+
+    if (!formValid) {
   errorcities.textContent = 'Sélectionner une ville'
-  isValid = false;
-  
-	return isValid 
+    }
+    return formValid;
+
+
 }
 
 // terms and conditions ok
