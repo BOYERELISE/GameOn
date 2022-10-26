@@ -165,10 +165,8 @@ function validCondition()
 			isValid = true
     
 		}else if(condi.checked!=true){
-      errorcondi.textContent = 'veuillez accepter les conditions'
+      errorcondi.textContent = 'Veuillez accepter les conditions'
     }
-   
-
   
 	return isValid 
 }
