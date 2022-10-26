@@ -101,7 +101,7 @@ function validBirthdate() {
   console.log("birthdate",birthdateValue)
   const errorbirthdate = document.querySelector("#error-message-birthdate");
 
-    var birthdateformat = /^(0?[1-9]|[12][0-9]|3[01])[\/\-](0?[1-9]|1[012])[\/\-]\d{4}$/;
+    var birthdateformat = /^\d{4}-\d{2}-\d{2}$/;
     console.log("pattern",birthdateformat.test(birthdateValue))
     if(!birthdateformat.test(birthdateValue)) {
       return errorbirthdate.textContent = 'Votre date de naissance est invalide';
